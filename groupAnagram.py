@@ -20,6 +20,21 @@ class Solution1:
             result.append(group)
 
         return result
+
+
+
+
+# brute force 2 
+class Solution3:
+    def groupAnagram(self, strs:list[str])->list[list[str]]:
+        groups= {}
+        for word in strs:
+            key =tuple(sorted(word))
+            if key in groups:
+                groups[key]=[]
+            groups[key].append(word)
+        return list(groups.values())
+            
     
 # neetcode solution
 
