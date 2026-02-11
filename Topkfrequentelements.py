@@ -1,28 +1,28 @@
-# brute force
+# brute force (Easier to do and understand)
 
 class Solution1:
     def topkfrequency(self,nums:list[int],k:int):
         
-        freq={}
+        freq={} # making a hash set
 
-        for num in nums:
-            if num in freq:
-             freq[num]+=1
+        for num in nums: # iterating for each elements
+            if num in freq:  #check if the num is in freq
+             freq[num]+=1    # if it is increase count
             else:
-               freq[num]=1
+               freq[num]=1  # else initialize the count
 
-        sorted_nums=sorted(freq,key=freq.get,reverse= True)
+        sorted_nums=sorted(freq,key=freq.get,reverse= True)  # sort the freq dict in ascending order
 
-        return sorted_nums[:k]
+        return sorted_nums[:k] # return top k frequent elements
     
 
 # neetcode Solution Bubbble Sort Method
 
 class Solution:
    def topKFrequent(self,nums:list[int],k:int)->list[int]:
-      count={}
+      count={} # 
       
-      freq=[[] for i in range(len(nums)+1)]
+      freq=[[] for i in range(len(nums)+1)] 
 
       for n in nums:
          count[n]=1+count.get(n,0)
