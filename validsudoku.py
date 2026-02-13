@@ -47,3 +47,31 @@ class Solution:
                 rows[r].add(board[r][c])
                 squares[(r//3,c//3)].add(board[r][c])
         return True
+
+
+# set method
+
+class Solution:
+    def isValidSudoku(self, board: list[list[str]]) -> bool:
+        rows = [set() for _ in range(9)]
+        cols = [set() for _ in range(9)]
+        squares = [set() for _ in range(9)]
+
+        for r in range(9):
+            for c in range(9):
+                if board[r][c] == ".":
+                    continue
+
+                num = board[r][c]
+                square_index = (r // 3) * 3 + (c // 3)
+
+                if (num in rows[r] or
+                    num in cols[c] or
+                    num in squares[square_index]):
+                    return False
+
+                rows[r].add(num)
+                cols[c].add(num)
+                squares[square_index].add(num)
+
+        return True
