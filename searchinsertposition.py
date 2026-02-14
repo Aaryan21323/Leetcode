@@ -1,3 +1,4 @@
+# binary serach method
 class Solution:
     def searchInsert(self, nums: list[int], target: int) -> int:
         left=0
