@@ -1,4 +1,4 @@
-# brute force method
+# brute force method time complexity:O(n^2) doesn't work in leetcode time limit exceeds
 
 class Solution:
     def maxArea(self,height:list[int])->int:
@@ -10,7 +10,7 @@ class Solution:
 
         return res
     
-#neetcode solution
+#neetcode solution linear time complexity O(n)
 class Solution:
    def maxArea(self,height:list[int])->int:
     res=0
