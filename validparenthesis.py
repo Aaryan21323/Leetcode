@@ -1,4 +1,4 @@
-# stack solution really hard to figure out on your own
+# stack solution really hard to figure out on your own 
 class Solution:
     def isValid(self, s: str) -> bool:
         stack = []
