@@ -23,6 +23,23 @@ class Solution2:
             l,r=l+1,r-1
         return True
 
+# left right pointer
+class Solution3:
+    def isPalindrome(self, x: int) -> bool:
+       xStr=str(x)
+       l,r=0,len(xStr)-1
+
+       if l==r:
+        return True
+
+       while l<=r:
+            if xStr[l]==xStr[r]:
+                l+=1
+                r-=1
+            else:
+                return False
+       return True
+
 
 x = 12321
 sol = Solution2()
